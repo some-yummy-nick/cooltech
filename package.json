@@ -1,13 +1,13 @@
 {
-  "name": "loft-template",
+  "name": "cooltech",
   "version": "1.0.0",
-  "description": "template for good works",
+  "description": "cooltech",
   "main": "gulpfile.js",
-  "repository" : "https://github.com/wowua/loftschool-template",
+  "repository" : "https://github.com/yeffasol/cooltech",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Vladimir Sabantsev",
+  "author": "Marat",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.9.7",
