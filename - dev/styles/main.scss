@@ -4,6 +4,10 @@
 
 @import "_misc/normalize";
 
+/* --------- fonts --------- */
+
+@import "_misc/fonts";
+
 /* --------- mixins --------- */
 
 @import "_misc/mixins";
@@ -12,4 +16,18 @@
 
 @import "_misc/adjustment";
 
+/* --------- mix icon sprite --------- */
+
+$mix-sprite:sprite-map('icons/mix/*.png', $spacing:70px);
+
+/* --------- common colors --------- */
+
+$black:#333;
+$orange: #ff6600;
+
+/* --------- sections --------- */
+
+@import "_sections/_header";
+@import "_sections/_nav";
+@import "_sections/_breadcrumbs";
 

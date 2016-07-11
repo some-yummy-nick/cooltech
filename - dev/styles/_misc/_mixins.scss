@@ -4,7 +4,12 @@
 	display: inline-block;
 	vertical-align: $valine;
 }
-
+@mixin marginLeft ($margin: 20px) {
+  margin-left: $margin;
+  &:first-child {
+    margin-left: 0;
+  }
+}
 @mixin clearfix {
 	&:before,
 	&:after {
