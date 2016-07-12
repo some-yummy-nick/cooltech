@@ -1,0 +1,131 @@
+.sidebar {
+  float: left;
+  width: 335px;
+}
+
+.categories {
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.6);
+  &__list {
+    border: 1px solid #dee2e5;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  &__item {
+    border-top: 1px solid #dee2e5;
+    &:first-child {
+      border-top: 0 none;
+    }
+    &_active {
+      .categories__link {
+        background: #d9e5ea;
+        color: #5d656c;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    padding: 11px 30px;
+    color: #7f7f7f;
+    text-decoration: none;
+  }
+}
+
+.filter {
+  &__list {
+    @extend .categories__list;
+  }
+  &__item {
+    padding: 12px 26px;
+    border: 1px solid $grey;
+    &:first-child {
+      border: none;
+    }
+  }
+  &__title-link {
+    display: block;
+    margin-bottom: 18px;
+    color: $black;
+    font-size: 16px;
+    line-height: 18px;
+    color: #303030;
+    @include open-sans(semibold);
+    text-decoration: none;
+  }
+  &__choose {
+    &-item {
+      margin-top: 16px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    &-label {
+      display: block;
+      position: relative;
+    }
+    &-elem {
+      position: relative;
+      width: 13px;
+      height: 13px;
+      border: 3px solid $orange;
+      border-radius: 100%;
+      transition: border-color .3s;
+      @include inlineblock();
+      &:after {
+        content: "";
+        @include absolute-center;
+        width: 0;
+        height: 0;
+        border-radius: 100%;
+        background: $orange;
+        transition: .3s;
+      }
+    }
+    &-input {
+      display: none;
+      &:checked + .filter__choose-elem {
+        &:after {
+          width: 9px;
+          height: 9px;
+        }
+      }
+    }
+    &-text {
+      @include inlineblock();
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+      max-width: 240px;
+      margin-left: 8px;
+    }
+    &_checkboxes {
+      .filter__choose-input {
+        &:checked + .filter__choose-elem {
+          background: $orange;
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+      .filter__choose-elem {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background: $grey;
+        transition: .2s;
+        border: 0 none;
+        &:after {
+          content: "";
+          width: 13px !important;
+          height: 10px !important;
+          @include absolute-center;
+          display: block;
+          opacity: 0;
+          transition: .2s;
+          @include get-sprite($mix-sprite, check);
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

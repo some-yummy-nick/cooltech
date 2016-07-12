@@ -24,10 +24,8 @@ $mix-sprite:sprite-map('icons/mix/*.png', $spacing:70px);
 
 $black:#333;
 $orange: #ff6600;
+$grey:#dee1e4;
 
 /* --------- sections --------- */
 
-@import "_sections/_header";
-@import "_sections/_nav";
-@import "_sections/_breadcrumbs";
-
+@import "_sections/**/*";
