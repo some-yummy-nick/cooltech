@@ -39,22 +39,22 @@
         .filter__content
           .filter__slider
             .filter__slider-displays
-            .filter__slider-left
-              .filter__slider-text от
-              input(type="text" name="" placeholder="").filter__slider-input.filter__slider-input_from
-            .filter__slider-right
-              .filter__slider-text до
-              input(type="text" name="" placeholder="").filter__slider-input.filter__slider-input_to
+              .filter__slider-left
+                .filter__slider-text от
+                input(type="text" name="" placeholder="").filter__slider-input.filter__slider-input_from
+              .filter__slider-right
+                .filter__slider-text до
+                input(type="text" name="" placeholder="").filter__slider-input.filter__slider-input_to
             .filter__slider-element  
       li.filter__item
         .filter__title
           a(href="#").filter__title-link Цвет
         .filter__content
           ul.filter__colors
-            - var colors = ["fff", "ccc", "000", "0a3153","ff1800", "fff343", "fb914a","92c37c", "fb914a"]
+            - var colors = ["fff", "ccc", "000", "0a3153","ff1800", "fff343", "fb914a","92c37c", "fb914a","000", "0a3153","ff1800"]
                   each color in colors
-                      li.filter__title-link
-                        a(href="#" style="backgound:#" + color).filter__colors-link
+                      li.filter__colors-item
+                        a(href="#" style="background:#" + color).filter__colors-link
       li.filter__item
         .filter__title
           a(href="#").filter__title-link Операционные системы

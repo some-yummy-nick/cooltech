@@ -1,6 +1,7 @@
 .sidebar {
   float: left;
   width: 335px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .categories {
@@ -127,6 +128,57 @@
           border-radius: 0;
         }
       }
+    }
+  }
+  &__reset{
+    color:#5db2fc;
+    font-size: 14px;
+    line-height: 16px;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__colors{
+    margin-left: -10px;
+    &-item{
+      @include inlineblock();
+      border: 3px solid transparent;
+      margin-left: 10px;
+      margin-bottom: 8px;
+      &:hover{
+        border-color: $orange;
+      }
+    }
+    &-link {
+      display: block;
+      border: 1px solid $grey;
+      width: 37px;
+      height: 37px;
+    }
+  }
+  &__slider{
+    &-displays{
+      @include clearfix;
+      margin-bottom: 18px;
+    }
+    &-left{
+      float: left;
+      width: 50%;
+    }
+    &-right{
+      float: right;
+      width: 50%;
+    }
+    &-input{
+      @extend .search__form-input;
+      padding: 10px 8px;
+      width: 83px;
+      @include inlineblock(middle);
+    }
+    &-text{
+      @include inlineblock(middle);
+      font-size: 14px;
+      line-height: 16px;
     }
   }
 }

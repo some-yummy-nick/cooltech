@@ -77,6 +77,11 @@ $socials-map:sprite-map('icons/socials/*.png', $spacing:70px);
     top: 0;
     left: -9999px;
   }
+  &_footer{
+    &__img{
+      max-width: 255px;
+    }
+  }
 }
 .search{
   float: left;

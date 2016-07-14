@@ -1,0 +1,71 @@
+.footer{
+background: url("../img/bg-footer.jpg") center;
+  position: relative;
+  &__left{
+    width: 45%;
+    float: left;
+    padding-top: 34px;
+  }
+  &__right{
+    width: 55%;
+    float: left;
+    text-align: right;
+  }
+  &__nav{
+    &-item{
+      @include inlineblock();
+      margin-left: 33px;
+      margin-bottom: 15px;
+    }
+    &-link{
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &__bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #494949;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  &__copyright{
+    padding: 8px 0;
+  }
+}
+.socials{
+  &_footer{
+    margin-bottom: 21px;
+    margin-top: 34px;
+    .socials__link{
+      display: block;
+      width: 45px;
+      height: 45px;
+      background: #fff;
+    }
+    .socials__item{
+      margin-left: 26px;
+    }
+    $dark-socials: fb, vk, tw;
+    $dark-socials-map:sprite-map('icons/socials-dark/*.png', $spacing:70px);
+    @each $social in $dark-socials {
+      .socials__item_#{$social} {
+        .socials__icon {
+          @include get-sprite($dark-socials-map, $social);
+          &:hover{
+            $icon-name:$social + "-hover";
+            @include get-sprite($dark-socials-map, $icon-name);
+          }
+        }
+      }
+    }
+  }
+}
