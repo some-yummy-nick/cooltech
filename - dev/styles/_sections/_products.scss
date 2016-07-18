@@ -1,3 +1,5 @@
+
+$stars-map: sprite-map('icons/stars/*.png', $spacing:70px);
 .products{
   margin-bottom: 50px;
   &__list{
@@ -143,22 +145,22 @@
         font-size: 14px;
         line-height: 16px;
       }
+
+      &-mark{
+        display: inline;
+        margin-left: -4px;
+      }
     }
   }
   
   &__rating{
-    $stars-map: sprite-map('icons/stars/*.png', $spacing:70px);
+
     &-stars{
       @include inlineblock(middle);
       &-item{
         @include inlineblock(middle);
         @include get-sprite($stars-map, empty);
-        
-        &_filled{
-          @include get-sprite($stars-map, filled);
-        }
       }
-
     }
 
     &-amount{
@@ -225,5 +227,10 @@
     }
   }
 }
+
+.products__rating-stars-item_filled{
+  @include get-sprite($stars-map, filled);
+}
+
 @import "../_views/_grid-view";
 @import "../_views/_line-view";

@@ -32,6 +32,10 @@
 
         &-options{
           display: none;
+
+          &-mark{
+            display: none;
+          }
         }
       }
 
