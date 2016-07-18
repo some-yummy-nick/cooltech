@@ -50,14 +50,16 @@ block content
                                     img(src="http://beerhold.it/45/45" alt="img").products__slideshow-thumbs-img
                           .products__article
                             .products__article-word Артикул
-                            .prosucts__article-num 189238
+                            .products__article-num 189238
                         .products__desc
                           .products__desc-title Samsung FT-I9301I GALAXY S 3
                           ul.products__desc-options
-                            - var options = { "Тип SIM-карты": "Micro-SIM", "Количество SIM-карт":"1", "Цвет": "Белый", "OC": "Android", "Связь 3G": "Есть", "4G(LTE)": "Нет", "GPS-модуль": "Есть"}
-                            each value, key in options
-                              li.products__desc-options-key= key
-                              li.products__desc-options-value= value
+                            - var option = { "Тип SIM-карты": "Micro-SIM", "Количество SIM-карт":"1", "Цвет": "Белый", "OC": "Android", "Связь 3G": "Есть", "4G(LTE)": "Нет", "GPS-модуль": "Есть"}
+                            - var index = 0;
+                            - for (item in option)
+                              li(class="products__desc-options-item" + ( !(index++ % 2) ? " products__desc-options-item_colored" : ""))
+                                .products__desc-options-key= item
+                                .products__desc-options-value= option[item]
                           .products__rating
                             ul.products__rating-stars
                               li.products__rating-stars-item.products__rating-stars-item_filled
@@ -74,18 +76,18 @@ block content
                             a(href="#").products__buy-btn В корзину
                             .products__availability
                               | В наличии
-              .pagination
-                ul.pagination__list
-                  li.pagination__item.pagination__item_prev
-                    a(href="#").pagination__link
-                      .pagination__mark
+            .pagination
+              ul.pagination__list
+                li.pagination__item.pagination__item_prev
+                  a(href="#").pagination__link
+                    .pagination__mark
+                - for (var i=1; i<4; i++)
                   li.pagination__item
-                  - for (var i=0; i<4; i++)
                     a(href="#").pagination__link
                       .pagination__mark= i
-                  li.pagination__item.pagination__item_next
-                    a(href="#").pagination__link
-                      .pagination__mark
+                li.pagination__item.pagination__item_next
+                  a(href="#").pagination__link
+                    .pagination__mark
 
 
         .attension

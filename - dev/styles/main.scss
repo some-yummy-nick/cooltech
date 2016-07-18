@@ -26,6 +26,14 @@ $black:#333;
 $orange: #ff6600;
 $grey:#dee1e4;
 
+/* --------- plugins --------- */
+
+@import "_plugins/**/*";
+
+/* --------- widjets --------- */
+
+@import "_widjets/**/*";
+
 /* --------- sections --------- */
 
 @import "_sections/**/*";

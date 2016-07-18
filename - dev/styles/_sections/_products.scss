@@ -1,20 +1,27 @@
 .products{
+  margin-bottom: 50px;
   &__list{
     border:1px solid $grey;
     border-radius: 5px;
-    overflow: hidden;
     background: #fff;
   }
 
   &__item{
     border-top: 1px solid $grey;
+
     &:first-child{
       border-top: 0 none;
     }
+
     &-inner{
       padding: 19px 22px;
       @include clearfix;
       position: relative;
+    }
+
+    &:hover{
+      background-color: #fbfbfb;
+      box-shadow: 0 1px 5.7px 0.3px rgba(119, 119, 119, 0.75);
     }
   }
 
@@ -103,6 +110,7 @@
   &__desc{
     float: left;
     width: 380px;
+    margin-left: 10px;
 
     &-title{
       margin-bottom: 20px;
@@ -114,6 +122,15 @@
     }
 
     &-options{
+
+      &-item{
+        background: transparent;
+        display: inline;
+
+        &_colored{
+          background: transparent;
+        }
+      }
 
       &-key{
         display: inline;
@@ -208,3 +225,5 @@
     }
   }
 }
+@import "../_views/_grid-view";
+@import "../_views/_line-view";
