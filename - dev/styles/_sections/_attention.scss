@@ -1,8 +1,18 @@
-.attension__text{
-  p{
-    font-size: 14px;
+.attension{
+  &__title{
+    color: #303030;
+    font-family: 'OpenSans';
+    font-size: 20px;
+    font-weight: 700;
     line-height: 20px;
-    color: $black;
-    margin-bottom: 20px;
+  }
+  &__text{
+    margin-top: 20px;
+    p{
+      font-size: 14px;
+      line-height: 20px;
+      color: $black;
+      margin-bottom: 20px;
+    }
   }
 }

@@ -17,7 +17,7 @@
 
     @include inlineblock(middle);
     &-wrap{
-      padding-top: 13px;
+      padding-top: 11px;
       padding-left: 20px;
     }
   }
@@ -67,6 +67,12 @@ $items: rows, grids, lines;
       @include get-sprite($views-map, $item);
     }
     &:hover{
+      $hover-icon:$item + '-hover';
+      .sort__view-icon {
+        @include get-sprite($views-map, $hover-icon);
+      }
+    }
+    &.active{
       $hover-icon:$item + '-hover';
       .sort__view-icon {
         @include get-sprite($views-map, $hover-icon);

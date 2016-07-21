@@ -73,6 +73,12 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing:70px);
       margin-left: 15px;
       float: left;
       border-radius: 2px;
+
+      &.active{
+        .products__slideshow-link{
+          border-color: $orange;
+        }
+      }
     }
 
     &-link{
@@ -82,6 +88,7 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing:70px);
       height: 34px;
       border-radius: 3px;
       margin-bottom: 0;
+      outline: none !important;
 
       &:hover{
         border-color: $orange;
